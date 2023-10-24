@@ -5,8 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" defer href="css/styles.css" />
-    <script src="js/scripts.js" defer></script>
+    <style>
+        
+ *{
+    box-sizing:border-box;
+ }
+
+ body{
+    width: 100%;
+    height:100%;
+ }
+
+form{
+    width: 300px;
+    margin: 200px;
+    text-align: center;
+}
+
+input{
+    display: block;
+    margin: 10px auto;
+    width: 250px;
+    height: 30px;
+}
+    </style>
+    <body style="background-color: #FFFAEF;">
+
 </head>
 <body>
     <h1>Preencha com seus dados abaixo</h1>
@@ -20,7 +44,24 @@
         <label for="password">Senha:</label>
         <input type="password" id="password">
 
-        <button type="submit">Eviar</button>
+        <input type="submit" style="background-color: #024223; color: #F3BC33; padding: 10px; border: none; cursor: pointer;" onclick="enviar(); return false">
     </form>
+    <script>
+function enviar(){
+
+var email = document.getElementById('email').value;
+var password = document.getElementById('password').value;
+
+if(email == "controlacash@admin.com" && senha == "mudar"){
+    alert('Sucesso');
+    location.href ="home.html";
+}else{
+    alert('Não foi possível enviar');
+}
+
+}
+
+    </script>
+
 </body>
 </html>
